@@ -47,7 +47,7 @@ const submitButton = document.getElementById("submit");
 // Initiate the score and current quiz (i keep it simple : no ramdom. At the moment,
 // everytime we run the quizz we will have the same questions)
 
-let currentQuiz = 0;
+let currentQuiz = Math.floor(Math.random() * data.length);
 let score = 0;
 
 displayQuiz();
@@ -56,7 +56,7 @@ displayQuiz();
 
 function displayQuiz() {
   uncheckAnswer();
-
+  // Math.floor(Math.random()*data.length)
   let currentQuizQuestion = data[currentQuiz];
 
   questionElement.innerText = currentQuizQuestion.question;
@@ -66,7 +66,7 @@ function displayQuiz() {
   answer_d.innerText = currentQuizQuestion.d;
 }
 
-// uncheck everytime a -new quiz is display
+// uncheck everytime a new quiz is display
 function uncheckAnswer() {
   answerElement.forEach((answerElement) => (answerElement.checked = false));
 }
@@ -86,9 +86,9 @@ function answerSelected() {
 // addEventlistenner on the button
 
 submitButton.addEventListener("click", () => {
-  // condition to score
   const answer = answerSelected();
 
+  // condition to score
   if (answer === data[currentQuiz].goodOne) {
     score++;
   }

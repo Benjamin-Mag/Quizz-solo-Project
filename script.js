@@ -1,6 +1,6 @@
 // DATA for the Quiz. Array of Objects
 
-const quizQuestions = [
+const dataQuiz = [
   {
     question: "who is the mad hatter ...?",
     a: "Nobody",
@@ -26,3 +26,40 @@ const quizQuestions = [
     goodOne: "d",
   },
 ];
+
+// select my elements and create a variable to store them
+
+const quizElement = document.getElementById("quiz");
+const answerElement = document.querySelectorAll(".answer");
+const questionElement = document.getElementById("question");
+
+// answer elements
+
+const answer_a = document.getElementById("answer_a");
+const answer_b = document.getElementById("answer_b");
+const answer_c = document.getElementById("answer_c");
+const answer_d = document.getElementById("answer_d");
+
+// submition button
+
+const submitButton = document.getElementById("submit");
+
+// Initiate the score and current quiz
+
+let currentQuiz = 0;
+let score = 0;
+
+// creates function to display my quiz
+
+function displayQuiz() {
+  let currentQuizQuestions = dataQuiz[currentQuiz];
+
+  questionElement.innerText = currentQuizQuestions.question;
+  answer_a.innerText = currentQuizQuestions.a;
+  answer_b.innerText = currentQuizQuestions.b;
+  answer_c.innerText = currentQuizQuestions.c;
+  answer_d.innerText = currentQuizQuestions.d;
+}
+
+
+displayQuiz()

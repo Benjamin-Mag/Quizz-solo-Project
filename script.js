@@ -1,6 +1,6 @@
 // DATA for the Quiz. Array of Objects
 
-const dataQuiz = [
+const data = [
   {
     question: "who is the mad hatter ...?",
     a: "Nobody",
@@ -27,14 +27,14 @@ const dataQuiz = [
   },
 ];
 
-// select my elements and create a variable to store them
+// select my elements
 
 const quizElement = document.getElementById("quiz");
-const answerElement = document.querySelectorAll(".answer");
 const questionElement = document.getElementById("question");
 
 // answer elements
 
+const answerElement = document.querySelectorAll(".answer");
 const answer_a = document.getElementById("answer_a");
 const answer_b = document.getElementById("answer_b");
 const answer_c = document.getElementById("answer_c");
@@ -44,22 +44,61 @@ const answer_d = document.getElementById("answer_d");
 
 const submitButton = document.getElementById("submit");
 
-// Initiate the score and current quiz
+// Initiate the score and current quiz (i keep it simple : no ramdom. At the moment,
+// everytime we run the quizz we will have the same questions)
 
 let currentQuiz = 0;
 let score = 0;
 
-// creates function to display my quiz
+displayQuiz();
+
+// function to display my quiz
 
 function displayQuiz() {
-  let currentQuizQuestions = dataQuiz[currentQuiz];
+  uncheckAnswer();
 
-  questionElement.innerText = currentQuizQuestions.question;
-  answer_a.innerText = currentQuizQuestions.a;
-  answer_b.innerText = currentQuizQuestions.b;
-  answer_c.innerText = currentQuizQuestions.c;
-  answer_d.innerText = currentQuizQuestions.d;
+  let currentQuizQuestion = data[currentQuiz];
+
+  questionElement.innerText = currentQuizQuestion.question;
+  answer_a.innerText = currentQuizQuestion.a;
+  answer_b.innerText = currentQuizQuestion.b;
+  answer_c.innerText = currentQuizQuestion.c;
+  answer_d.innerText = currentQuizQuestion.d;
 }
 
+// uncheck everytime a -new quiz is display
+function uncheckAnswer() {
+  answerElement.forEach((answerElement) => (answerElement.checked = false));
+}
 
-displayQuiz()
+function answerSelected() {
+  // checking wich answer is checked or not and return the id :a,b,c or d . This way it's easier to find the good answer
+  //i'll have to compare data.goodOne to the aswerElement id. Return the ID
+  let answer;
+  answerElement.forEach((answerElement) => {
+    if (answerElement.checked) {
+      answer = answerElement.id;
+    }
+  });
+  return answer;
+}
+
+// addEventlistenner on the button
+
+submitButton.addEventListener("click", () => {
+  // condition to score
+  const answer = answerSelected();
+
+  if (answer === data[currentQuiz].goodOne) {
+    score++;
+  }
+
+  currentQuiz++;
+  // check if it's the end of the quiz.
+  if (currentQuiz < data.length) {
+    displayQuiz();
+  } else {
+    quizElement.innerHTML = `plouplout ${score} / ${data.length}
+    <button onclick="location.reload()"> Restart </button>`;
+  }
+});

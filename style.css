@@ -22,11 +22,12 @@ body {
   position: relative;
 }
 .container{
-  width: 800px;
-  max-width: 80%;
+  width:fit-content;
+  
   border-radius: 10px;
   background-color: grey;
   padding: 5px;
+  
 
 }
 .counter{
@@ -38,7 +39,7 @@ body {
 .btn-all{
   display: grid;
   grid-template-columns:repeat(2,auto);
-  gap: 6px;
+  gap: 15px;
   margin:  20px 0;
 }
 .controls{

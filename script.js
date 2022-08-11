@@ -12,4 +12,7 @@ function startTheGame() {
   // remove class 'hide' to display my quiz (need to store it inside a const)
   questionContainer.classList.remove("hide");
   counterContainer.classList.remove("hide");
+  displayQuestion(); // call the function to display my question : let's initiate it
 }
+
+function displayQuestion() {}

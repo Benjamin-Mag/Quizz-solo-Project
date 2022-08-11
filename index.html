@@ -5,34 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
     <title>Quiz Quiz Project</title>
   </head>
   <body>
-    <div class="quiz-box" id="quiz">
-      <div class="header-box">
-        <h2 id="question">Questions</h2>
-        <ul>
-          <li>
-            <input type="radio" name="answer" id="a" class="answer" />
-            <label for="a" id="answer_a">Réponse A</label>
-          </li>
-          <li>
-            <input type="radio" name="answer" id="b" class="answer" />
-            <label for="b" id="answer_b">Réponse B</label>
-          </li>
-          <li>
-            <input type="radio" name="answer" id="c" class="answer" />
-            <label for="c" id="answer_c">Réponse C</label>
-          </li>
-          <li>
-            <input type="radio" name="answer" id="d" class="answer" />
-            <label for="d" id="answer_d">Réponse D</label>
-          </li>
-        </ul>
+    <div class="counter hide" id="counter">counter good answers</div>
+    <div class="container">
+      <div id="question-container" class="hide">
+        <div id="question">Question</div>
+        <div id="answer-buttons" class="btn-all">
+          <button id="a" class="btn">réponse A</button>
+          <button id="b" class="btn">réponse B</button>
+          <button id="c" class="btn">reponse C</button>
+          <button id="d" class="btn">réponse D</button>
+        </div>
       </div>
-      <button id="submit">Submit</button>
+      <div class="controls">
+        <button id="start-btn" class="start-btn">Start</button>
+        <button id="next-btn" class="next-btn hide">Next</button>
+      </div>
     </div>
-
-    <script src="script.js"></script>
   </body>
 </html>

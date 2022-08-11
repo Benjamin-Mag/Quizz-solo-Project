@@ -1,44 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 * {
   box-sizing: border-box;
+  font-family: 'Silkscreen', cursive;;
+  font-size: 1rem;
 }
 body {
-  background-color: blueviolet;
+  background-image: url(QuizNight.jpeg);
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size:cover;
   border: 10px solid black;
+
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container{
+  width: 800px;
+  max-width: 80%;
+  border-radius: 10px;
+  background-color: grey;
+  padding: 5px;
+
+}
+.counter{
+  display: block;
+  position: absolute;
+  top:250px
+}
+
+.btn-all{
+  display: grid;
+  grid-template-columns:repeat(2,auto);
+  gap: 6px;
+  margin:  20px 0;
+}
+.controls{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  margin: 0;
 }
 
-.quiz-box {
-  background-color: aqua;
-  width: 400px;
-  border: 2px solid blue;
+.btn{
+  border-radius: 0px;
 }
 
-.header-box {
-  border: 1px solid black;
-  padding: 2rem;
+.hide{
+  display: none;
 }
 
-h2 {
-  border: 1px solid blue;
-  text-align: center;
+.start-btn{
+  padding: 10px 20px;
+  font-weight: bold;
 }
-
-ul {
-  list-style: none;
-  border: 4px solid white;
-  padding: 0;
-}
-
-button {
-  border: 1px solid black;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: grey;
-  padding: 15px;
-  width: 120px;
+.next-btn{
+  padding: 10px 20px;
+  font-weight: bold;
 }

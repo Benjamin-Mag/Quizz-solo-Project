@@ -5,25 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="index.js"></script>
     <script defer src="script.js"></script>
-    <title>Quiz Quiz Project</title>
+    <title>It's not a Quiz Project</title>
   </head>
   <body>
-    <div class="counter hide" id="counter">counter good answers</div>
-    <div class="container">
-      <div id="question-container" class="hide">
-        <div id="question">Question</div>
-        <div id="answer-buttons" class="btn-all">
-          <button id="a" class="btn">réponse A</button>
-          <button id="b" class="btn">réponse B</button>
-          <button id="c" class="btn">reponse C</button>
-          <button id="d" class="btn">réponse D</button>
-        </div>
-      </div>
-      <div class="controls">
-        <button id="start-btn" class="start-btn">Start</button>
-        <button id="next-btn" class="next-btn hide">Next</button>
-      </div>
-    </div>
+    <button id="start-btn" class="center start-btn">Start</button>
+    <button id="restart-btn" class="hide center start-btn restart-btn">
+      Play Again
+    </button>
+    <h1 id="score" class="center">0</h1>
+    <p id="grid" class="grid hide"></p>
   </body>
 </html>

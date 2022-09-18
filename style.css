@@ -1,5 +1,5 @@
 body {
-  background-image: url(Stamp_BG.png);
+  background-image: url(./Images/Stamp_BG.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -34,7 +34,7 @@ body {
   left: 30%;
   top: 25%;
   justify-items: center;
-  background-image: url(mario.jpg);
+  background-image: url(./Images/mario.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -59,14 +59,14 @@ body {
   position: absolute;
   width: 100px;
   height: 20px;
-  background-image: url("Moving Platform3.gif");
+  background-image: url("./Images/Moving\ Platform3.gif");
 }
 
 .block {
   position: absolute;
   width: 100px;
   height: 20px;
-  background-image: url("Bricks.gif");
+  background-image: url("./Images/Bricks.gif");
 }
 
 .ball {
@@ -74,5 +74,5 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 10px;
-  background-image: url("Firework3.gif");
+  background-image: url("./Images/Firework3.gif");
 }

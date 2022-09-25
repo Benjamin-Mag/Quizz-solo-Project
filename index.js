@@ -95,14 +95,14 @@ function moveUser(e) {
   switch (e.key) {
     case "ArrowLeft":
       if (currentPosition[0] > 0) {
-        currentPosition[0] -= 10;
+        currentPosition[0] -= 20;
         console.log(currentPosition[0] > 0);
         drawUser();
       }
       break;
     case "ArrowRight":
       if (currentPosition[0] < boardWidth - blockWidth) {
-        currentPosition[0] += 10;
+        currentPosition[0] += 20;
         console.log(currentPosition[0]);
         drawUser();
       }

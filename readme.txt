@@ -11,7 +11,7 @@ No sound, it won't cover your "plop", you should put some music.
 - No LogOut button... who cares about those buttons.. 
 - But you can resfre.. restart your game !
 - Using DOM Manipulation because we love it Wild ! grrrR
-- Our CSS file is a real piece of art itself. 
+- Our CSS file is a real piece of art itself (please don't touch it, it could possibly result opening a black hole somewhere) 
 - The ball is kinda predictible... be advise :)
 - You can chose your own difficulty level (not really)
 
